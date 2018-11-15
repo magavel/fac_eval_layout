@@ -7,7 +7,68 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
+		<style>
+			.content{
+                margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+                flex-flow: wrap;
+                justify-content: center;
+                max-width: 400px;
+			}
+            .image{
+                max-width: 300px;
+                margin: 10px;
+            }
+			.image img{
+                width: 100%;
+
+			}
+            .desktopG, .desktop, .tablette{
+                display: none;
+            }
+
+            .txtcenter{
+                text-align: center;
+            }
+
+
+            @media screen and (min-width:769px) {
+                .content{
+                    flex-wrap: wrap;
+                    max-width: 650px;
+                }
+
+                .tablette{
+                    display: block;
+                }
+                .desktopG, .desktop, .telephone{
+                    display: none;
+                }
+            }
+            @media screen and (min-width: 970px){
+                .telephone, .tablette, .desktopG{
+                    display: none;
+                }
+                .desktop{
+                    display: block;
+                }
+            }
+
+            @media screen and (min-width: 1370px) {
+                .content{
+                    max-width: 100%;
+                }
+                .telephone, .tablette, .desktop{
+                    display: none;
+                }
+                .desktopG{
+                    display: block;
+                }
+            }
+
+
+		</style>
 	</head>
 	<body>
 		<h1 class="txtcenter">Evaluation  Layout</h1>
@@ -15,6 +76,25 @@
 		<h2 class="desktop txtcenter">Vue Desktop</h2>
 		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
 		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+
+		<div class="content">
+			<div class="image">
+				<img src="img/mer.jpg">
+			</div>
+			<div class="image">
+				<img src="img/lac.jpg">
+			</div>
+			<div class="image">
+				<img src="img/montagne.jpg">
+			</div>
+			<div class="image">
+				<img src="img/foret.jpg">
+			</div>
+
+		</div>
+
+
+
 
 
 
